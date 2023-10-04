@@ -51,7 +51,8 @@ const [detailedData,setDetailedData]=useState({})
         }
     }
     //  http://localhost:3001/
-    let localUrl=`${process.env.REACT_APP_BASE_URL}home/faculty/${props.url}`
+    // ${process.env.REACT_APP_BASE_URL}
+    let localUrl=`https://andc-treasure-apis.vercel.app/home/faculty/${props.url}`
     const fetchData = async () => {
         const data = await fetch(localUrl, {
             method: 'GET',
