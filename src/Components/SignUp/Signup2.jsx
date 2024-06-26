@@ -59,7 +59,8 @@ const Signup2 = (props) => {
             })
             props.setLoader(false);
             const result=await response.json();
-            console.log(result.Message)
+            // console.log(result.Message)
+            console.log("Registration response recieved ",result.Message)
             // result.status===200?localStorage.setItem({token:result.token}):null
             if(result.status===201){
                 context.setCurrentUser(result.data)
