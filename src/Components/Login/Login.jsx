@@ -18,13 +18,13 @@ const Login=()=>{
      }
 
     //  close the form on clicking anywhere 
-    // document.addEventListener('mouseup', function(e) {
-    //     var container = document.getElementById('container');
-    //     if (!container.contains(e.target)) {
-    //         container.style.display = 'none';
-    //         navigate('/')
-    //     }  
-    // });
+    document.addEventListener('mouseup', function(e) {
+        var container = document.getElementById('container');
+        if (!container.contains(e.target)) {
+            container.style.display = 'none';
+            navigate('/')
+        }  
+    });
 
 
      // state to manage the error tooltip for every input box 
