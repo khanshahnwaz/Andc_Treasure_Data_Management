@@ -20,8 +20,8 @@ const Login=()=>{
     //  close the form on clicking anywhere 
     document.addEventListener('mouseup', function(e) {
         var container = document.getElementById('container');
-        if (!container.contains(e.target)) {
-            container.style.display = 'none';
+        if (container && !container.contains(e.target)) {
+            // container.style.display = 'none';
             navigate('/')
         }  
     });
@@ -101,7 +101,7 @@ const Login=()=>{
        <Successful url='/'/>
     <div className="fixed  z-30 w-screen h-screen inset-0 bg-gray-700 bg-opacity-60"></div>
     
-    <div id='container'  className="flex fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-40  bg-white rounded-lg shadow-2xl p-10 md:w-[50%] h-4/5 w-[92%] "> 
+    <div id='container'  className="flex fixed top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-40  bg-white rounded-lg shadow-2xl p-10 md:w-[50%] md:h-4/5 w-[92%] "> 
     <img src={remove} alt='remove' className='float-right fixed -traslate-x-1/2 -translate-y-1/2 -right-1 -top-2 hover:opacity-10 cursor-pointer' onClick={navigateToHome}/>
     <Loader loader={loader}/>
 
