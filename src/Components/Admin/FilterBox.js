@@ -52,8 +52,8 @@ const FilterBox = (props) => {
         <select className='bg-white' name="Designation" id="Designation" placeholder='Designation' value={designation} onChange={(e)=>props.setDesignation(e.target.value)}>
             <option value="">Designation</option>
   <option value="Professor">Professor</option>
-  <option value="Assistant Professor">Assistant Professor</option>
-  <option value="Associate Professor">Associate Professor</option>
+  <option value="Assistant Professor">As. Professor</option>
+  {/* <option value="Associate Professor">Associate Professor</option> */}
 </select>
 </div>
 

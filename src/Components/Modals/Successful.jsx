@@ -1,5 +1,5 @@
 import React from 'react'
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PublicationContext } from '../../Context/PublicationState';
 const Successful = (props) => {
@@ -10,7 +10,7 @@ const Successful = (props) => {
     context.setAddChapter(false)
     context.setAddJournal(false)
     context.setAddConference(false)
-    console.log(props.url)
+    // console.log(props.url)
     context.setSuccessMessage(null)
     context.setCallEditBook(false)
     context.setCallEditJournal(false)
@@ -19,9 +19,11 @@ const Successful = (props) => {
 
       navigate(props.url)
   }
+  // useEffect(()=>context.successMessage==null?navigate(props.url):null,[context.successMessage])
   if(context.successMessage!=null){
   return (
-    <div>
+    // successBox id is given to handle the performance of mouseup event in login and signup forms 
+    <div id='successBox'> 
    
     {/* <!-- Overlay element --> */}
     <div id="overlay" className="fixed  z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>

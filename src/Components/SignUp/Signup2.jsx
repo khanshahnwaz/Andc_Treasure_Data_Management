@@ -14,10 +14,11 @@ const Signup2 = (props) => {
         console.log("values submitted in both the form", data)
     },[data])
     const context=useContext(PublicationContext)
-    const navigate=useNavigate();
-    const navigateToHome=()=>{
-       navigate('/');
-    }
+   
+
+
+
+    
     // states to manage the error tooltip for each input box 
     const[visiName,setVisiName]=useState(false)
     const[visiDesignation,setVisiDesignation]=useState(false);
@@ -91,7 +92,8 @@ const Signup2 = (props) => {
     },[form])
   return (
     <>
-    
+        <Error url='/signUp'/>
+        <Successful url='/'/>
     <form onSubmit={form.handleSubmit}>
     <div className='wrapperDiv grid gap-3'>
             <div>
@@ -134,8 +136,8 @@ const Signup2 = (props) => {
               
 <Tippy visible={visiDesignation} content={form.errors.designation} placement='right'>
 <div className='flex w-full gap-x-2 rounded border-2 border-[#7e22c3] float-left h-max py-2 justify-center'>
-<input type="radio" id="As. Professor" name="designation"  className='border-2 border-[#bd8ce2] rounded-lg float-left mt-1 py-2' onBlur={form.handleBlur} onChange={form.handleChange} value='As.Prfessor' />
-<label htmlFor="asProfessor" className='float-left text-[#7e22ce] font-bold'>As. Professor</label></div></Tippy>
+<input type="radio" id="As. Professor" name="designation"  className='border-2 border-[#bd8ce2] rounded-lg float-left mt-1 py-2' onBlur={form.handleBlur} onChange={form.handleChange} value='As. Professor' />
+<label htmlFor="asProfessor" className='float-left text-[#7e22ce] font-bold text-left'>As. Professor</label></div></Tippy>
 
 
 </div>

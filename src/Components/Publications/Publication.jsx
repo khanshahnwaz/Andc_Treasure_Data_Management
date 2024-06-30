@@ -27,7 +27,7 @@ import ChapterCard from "./Cards/ChapterCard"
 import JournalCard from "./Cards/JournalCard";
 import ConferenceCard from "./Cards/ConferenceCard";
 const Book = (props) => {
-    console.log("I am in publication details to print ",props.url)
+    // console.log("I am in publication details to print ",props.url)
     const context=useContext(PublicationContext)
 
     // state to keep the fetched keys to display in rows
@@ -63,7 +63,7 @@ const [detailedData,setDetailedData]=useState({})
             }
         });
         const result = await data.json();
-        console.log("Fetched data from the database is",result)
+        // console.log("Fetched data from the database is",result)
         setData(result)
         // setDataKeys(result.check)
         
@@ -79,10 +79,10 @@ const [detailedData,setDetailedData]=useState({})
     //     setOffset(()=>offset+=5)
     // },[page])
     const element = data.map((item,i) => {
-        console.log("Item recieved is ",item)
+        // console.log("Item recieved is ",item)
         // <BookCard dat={item}/>
         if(props.name=='Books'){
-            console.log("It is time to show book details ");
+            // console.log("It is time to show book details ");
             return <BookCard data={item} i={i}/>
         }else if(props.name=='Chapter'){
             return <ChapterCard data={item} i={i}/>
@@ -99,7 +99,7 @@ const [detailedData,setDetailedData]=useState({})
     
 
     const deleteOrUpdate=(event)=>{
-    console.log("Edit or Delete button clicked for the following data: ")
+    // console.log("Edit or Delete button clicked for the following data: ")
 // third children contains the ISBN data
     // context.setTargetId(event.target.parentElement.parentElement.children[3].innerText)
     context.setTargetId(event.target.parentElement.getAttribute('targetisbn'))
@@ -121,7 +121,7 @@ const [detailedData,setDetailedData]=useState({})
             
         }
         else if(event.target.name=='edit'){
-            console.log("Edit Publication Called.")
+            // console.log("Edit Publication Called.")
             if(props.name=='Books'){
                 data.map((item,i)=>{
                     // console.log(item)

@@ -21,14 +21,29 @@ const SignUp=()=>{
     const navigateToHome=()=>{
        navigate('/');
     }
-    // document.addEventListener('mouseup', function(e) {
-    //     var container = document.getElementById('container');
-    //     if (!container.contains(e.target)) {
-    //         // container.style.display = 'none';
-    //         navigate('/')
-    //     }
-        
-    // });
+    //  close the form on clicking anywhere
+  function closeForm(e) {
+    // console.log(
+    //   "Mouseup event is triggered in login form and modal condition is ",
+    //   context.errorMessage
+    // );
+    var container = document.getElementById("container");
+    let errorBox=document.getElementById('errorBox')
+    let successBox=document.getElementById('successBox')
+    // whenever modal box is open to indicate successfull login or signup and we click on it this even is triggered which is not intented
+    if (
+      container &&
+      !container.contains(e.target) && !errorBox && !successBox
+      
+    ) {
+      // container.style.display = 'none';
+      navigate("/");
+    }
+  }
+  useEffect(
+    () => document.addEventListener("mouseup", (e) => closeForm(e)),
+    []
+  );
 
 
     // state to manage the error tooltip for every input box 
@@ -50,7 +65,7 @@ const SignUp=()=>{
             const errors={};
             if(!values.phone ){
                 errors.phone='Required'
-            }
+            }else if(values.phone.toString().length!=10) errors.phone='Only 10 digit allowed'
             if(!values.email){
                 errors.email='Required'
             }else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
@@ -75,8 +90,8 @@ const SignUp=()=>{
     })
 
     useEffect(()=>{
-       console.log("touched",formik.touched)
-       console.log("errors",formik.errors)
+    //    console.log("touched",formik.touched)
+    //    console.log("errors",formik.errors)
         if(formik.errors.email && formik.touched.email){
             setVisiEmail(true)
         }else setVisiEmail(false)
@@ -93,8 +108,7 @@ const SignUp=()=>{
     // console.log("Visited fields",formik.touched)
     return (
         <>
-        <Error url='/signUp'/>
-    <Successful url='/'/>
+    
         {/* <!-- Overlay element --> */}
      <div className="fixed  z-30 w-screen h-screen inset-0 bg-gray-700 bg-opacity-60"></div>
      
@@ -133,7 +147,7 @@ const SignUp=()=>{
                  <div>
                  <label htmlFor='phone' className='float-left text-[#7e22ce] font-bold' >Phone</label><br/>
                  <Tippy visible={visiPhone} content={formik.errors.phone} placement='top-end'>
-                 <input type='text' className='border-2 border-[#bd8ce2] rounded-lg float-left mt-1 py-2 w-full' name='phone' onBlur={formik.handleBlur}onChange={formik.handleChange} value={formik.values.phone} ></input>
+                 <input type='number' className='border-2 border-[#bd8ce2] rounded-lg float-left mt-1 py-2 w-full' name='phone' onBlur={formik.handleBlur}onChange={formik.handleChange} value={formik.values.phone} ></input>
                  </Tippy>
                  </div>
                  <div>

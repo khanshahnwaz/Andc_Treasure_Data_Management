@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PublicationContext } from '../../Context/PublicationState';
 const Error = (props) => {
+    
     const context=useContext(PublicationContext)
     const navigate=useNavigate();
     const navigateToDetails=()=>{
@@ -18,13 +19,12 @@ const Error = (props) => {
     // });
 
     // hide the overlay and the dialog
-   
+
 
 if(context.errorMessage!=null){ //if some  error message has been set 
   return (
     
-    <div>
-    
+    <div id='errorBox' >
 
     {/* <!-- Overlay element --> */}
     <div id="overlay" className="fixed  z-40 w-screen h-screen inset-0 bg-gray-900 bg-opacity-60"></div>

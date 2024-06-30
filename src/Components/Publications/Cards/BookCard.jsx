@@ -1,8 +1,8 @@
 import React from 'react'
 import {FiCheckCircle} from "react-icons/fi";
 const BookCard = (props) => {
-  console.log("this is me.")
-  console.log("Book card recieved ",props.data)
+  // console.log("this is me.")
+  // console.log("Book card recieved ",props.data)
   return (
     <div key={props.i} className='px-5 py-10 m-2 rounded-lg border-2 broder-gray-400  hover:shadow-xl w-[25vw] h-max text-left '>
         <div className='text-2xl font-bold tracking-wide my-2'>

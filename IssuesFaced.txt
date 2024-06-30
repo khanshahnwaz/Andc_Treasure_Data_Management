@@ -1,0 +1,3 @@
+Problem: After successfull/error login/signup successfull dialog box is disappearing on clicking any where inside the box but it is not closed as when I am opening the profile section then any publication the same modal is visible even when there is no need of that. 
+
+Sol: while handling the event mouseup, checking if any modal box(error/successfull) is opened or not, if it is open then do not route to home page after clicking anywhere untill modal is closed
