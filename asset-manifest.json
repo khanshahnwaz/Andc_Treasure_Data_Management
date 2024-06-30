@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Andc_Treasure_Data_Management/static/css/main.3b764a1f.css",
-    "main.js": "/Andc_Treasure_Data_Management/static/js/main.fdf7b120.js",
+    "main.css": "/Andc_Treasure_Data_Management/static/css/main.116aa911.css",
+    "main.js": "/Andc_Treasure_Data_Management/static/js/main.38859724.js",
     "static/js/787.4cfc5b71.chunk.js": "/Andc_Treasure_Data_Management/static/js/787.4cfc5b71.chunk.js",
     "static/media/principal.jpg": "/Andc_Treasure_Data_Management/static/media/principal.bd2e38e7cdc435eca853.jpg",
     "static/media/user.png": "/Andc_Treasure_Data_Management/static/media/user.cc384a274636f5aa09ef.png",
@@ -12,12 +12,12 @@
     "static/media/slick.ttf": "/Andc_Treasure_Data_Management/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/Andc_Treasure_Data_Management/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Andc_Treasure_Data_Management/index.html",
-    "main.3b764a1f.css.map": "/Andc_Treasure_Data_Management/static/css/main.3b764a1f.css.map",
-    "main.fdf7b120.js.map": "/Andc_Treasure_Data_Management/static/js/main.fdf7b120.js.map",
+    "main.116aa911.css.map": "/Andc_Treasure_Data_Management/static/css/main.116aa911.css.map",
+    "main.38859724.js.map": "/Andc_Treasure_Data_Management/static/js/main.38859724.js.map",
     "787.4cfc5b71.chunk.js.map": "/Andc_Treasure_Data_Management/static/js/787.4cfc5b71.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b764a1f.css",
-    "static/js/main.fdf7b120.js"
+    "static/css/main.116aa911.css",
+    "static/js/main.38859724.js"
   ]
 }
