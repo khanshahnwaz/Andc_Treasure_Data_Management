@@ -155,7 +155,7 @@ const Login = () => {
           <p className="text-sm mt-2 text-left px-10 text-gray-200">
             Discover world best community of freelancers and business owners.
           </p>
-          <div className=" lg:mt-44 p-3 lg:py-5 lg:px-5 lg:pb-4 mx-10 bg-[#5c1e7e] font-semibold lg:font-bold  text-left text-gray-200 h-dvh rounded-lg shadow-lg text-sm">
+          <div className=" p-3 lg:py-5 lg:px-5 lg:pb-4 mx-10 bg-[#5c1e7e] font-semibold lg:font-bold  text-left text-gray-200 h-dvh rounded-lg shadow-lg text-sm">
             Simply unbelievable! I am absolutely satisfied with my business.
             This is absolutely wonderful.
           </div>
